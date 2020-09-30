@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import {ShareModule} from '../share/share.module'
 import { MainComponent } from './main.component';
 
-import {Routes, RouterModule} from '@angular/router';;
+import {Routes, RouterModule} from '@angular/router';
+import { BodyComponent } from './body/body.component';;
 const approuter : Routes =[
   {
     path:'',
@@ -11,7 +12,7 @@ const approuter : Routes =[
   }
 ]
 @NgModule({
-  declarations: [MainComponent],
+  declarations: [MainComponent, BodyComponent],
   imports: [
     CommonModule,
     ShareModule,
