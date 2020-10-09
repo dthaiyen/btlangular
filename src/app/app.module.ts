@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Routes, RouterModule, Router} from '@angular/router';
 import { NgModel } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
 const approuter : Routes =[
   {
     path:'',
@@ -18,9 +19,10 @@ const approuter : Routes =[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(approuter)
+    RouterModule.forRoot(approuter),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

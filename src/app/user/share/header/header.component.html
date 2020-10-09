@@ -20,7 +20,7 @@
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kreen-clone-mobile-menu kreen-nav main-menu">
-                                <li id="menu-item-230"
+                                <!-- <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kreen-menu-item-title" title="Home" href="index.html">Home</a>
                                     <span class="toggle-submenu"></span>
@@ -64,6 +64,9 @@
                                             <a class="kreen-menu-item-title" title="Page 404"
                                                href="404.html">Page 404</a></li>
                                     </ul>
+                                </li> -->
+                                <li *ngFor="let mn of menus"  id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kreen-menu-item-title" title="Pages" href="#">{{mn.tendm}}</a>
                                 </li>
                             </ul>
                         </div>
