@@ -13,6 +13,8 @@ export class BodyComponent extends BaseComponent implements OnInit {
     super(injector)
   }
   itemnew: any;
+  newnew: any;
+  a: tintuc;
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
       console.log("hello admin");
@@ -22,6 +24,18 @@ export class BodyComponent extends BaseComponent implements OnInit {
           this.loadScripts();
         })
       })
+      this.http.get("https://localhost:44334/api/tintuc/get_tintuc_new").subscribe((res)=>{
+        this.newnew = res;
+        setTimeout(()=>{
+          this.loadScripts();
+        })
+      })
     })     
   }
+}
+interface tintuc {
+  matt : any;
+  tentt:string;
+  ngaydang: Date;
+  Tomtat: string;
 }
