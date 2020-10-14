@@ -15,6 +15,7 @@ export class ChitietspComponent extends BaseComponent implements OnInit {
     super(injector)
   }
   sp : any;
+  ctlq:any;
   txtsoluong: any;
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
@@ -23,6 +24,9 @@ export class ChitietspComponent extends BaseComponent implements OnInit {
         this.sp = res;
         setTimeout(()=>{
           this.loadScripts();
+          this.http.get("https://localhost:44334/api/Item/Get_Sanpham_lq/"+this.sp.maloai).subscribe(res=>{
+            this.ctlq = res;
+          });
         })
       })
     })
