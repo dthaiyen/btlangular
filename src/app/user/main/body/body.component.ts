@@ -32,6 +32,10 @@ export class BodyComponent extends BaseComponent implements OnInit {
       })
     })     
   }
+  add_cart(sp){
+    this._cart.addToCart(sp);
+    alert("thêm thành công");
+  }
 }
 interface tintuc {
   matt : any;

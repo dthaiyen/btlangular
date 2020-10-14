@@ -15,6 +15,7 @@ export class ChitietspComponent extends BaseComponent implements OnInit {
     super(injector)
   }
   sp : any;
+  txtsoluong: any;
   ngOnInit(): void {
     this._route.params.subscribe(params=>{
       let id = params["id"];
@@ -25,5 +26,12 @@ export class ChitietspComponent extends BaseComponent implements OnInit {
         })
       })
     })
+  }
+  add_cart(sp){
+    this._cart.addToCartQuantity(sp,parseInt(this.txtsoluong));
+    alert("thêm sản phẩm thành công");
+  }
+  changequantiti(sl){
+    this.txtsoluong = sl;
   }
 }
