@@ -5,6 +5,7 @@ import { MainComponent } from './main.component';
 import {Routes, RouterModule} from '@angular/router';
 import { BodyComponent } from './body/body.component';
 import { CartComponent } from './cart/cart.component';
+import { LienheComponent } from './lienhe/lienhe.component';
 
 const approuter : Routes =[
   {
@@ -31,7 +32,7 @@ const approuter : Routes =[
   }
 ]
 @NgModule({
-  declarations: [MainComponent, BodyComponent, CartComponent],
+  declarations: [MainComponent, BodyComponent, CartComponent, LienheComponent],
   imports: [
     CommonModule,
     ShareModule,
