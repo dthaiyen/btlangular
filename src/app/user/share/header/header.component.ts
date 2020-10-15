@@ -10,6 +10,8 @@ import 'rxjs/add/operator/takeUntil';
 export class HeaderComponent extends BaseComponent implements OnInit {
   menus:any;
   total:any;
+  items:any;
+  totalprice:any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -18,6 +20,20 @@ export class HeaderComponent extends BaseComponent implements OnInit {
       this.menus = res;
       console.log(this.menus);
     }); 
+    this._cart.items.subscribe(res=>{
+      this.items = res;
+      var x =0;
+      this.totalprice = 0;
+      for(let i of this.items){
+        x = x + 1;
+        this.totalprice = this.totalprice + i.soluong * i.gia;
+      }
+      this.total = x;
+    })
+  }
+  deleteItem(id) { 
+    this._cart.deleteItem(id);
+    alert('Xóa thành công');
   }
 
 }

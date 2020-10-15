@@ -20,51 +20,6 @@
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kreen-clone-mobile-menu kreen-nav main-menu">
-                                <!-- <li id="menu-item-230"
-                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kreen-menu-item-title" title="Home" href="index.html">Home</a>
-                                    <span class="toggle-submenu"></span>
-                                   
-                                </li>
-                                <li id="menu-item-228"
-                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kreen-menu-item-title" title="Shop"
-                                       href="shop.html">Shop</a>
-                                    <span class="toggle-submenu"></span>
-                                  
-                                </li>
-                                <li id="menu-item-229"
-                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kreen-menu-item-title" title="Elements" href="#">Elements</a>
-                                    <span class="toggle-submenu"></span>
-                                  
-                                </li>
-                                <li id="menu-item-996"
-                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kreen-menu-item-title" title="Blog"
-                                       href="blog.html">Blog</a>
-                                    <span class="toggle-submenu"></span>
-                                   
-                                </li>
-                                <li id="menu-item-237"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-237 parent">
-                                    <a class="kreen-menu-item-title" title="Pages" href="#">Pages</a>
-                                    <span class="toggle-submenu"></span>
-                                    <ul role="menu" class="submenu">
-                                        <li id="menu-item-987"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
-                                            <a class="kreen-menu-item-title" title="About"
-                                               href="about.html">About</a></li>
-                                        <li id="menu-item-988"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-988">
-                                            <a class="kreen-menu-item-title" title="Contact"
-                                               href="contact.html">Contact</a></li>
-                                        <li id="menu-item-990"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-990">
-                                            <a class="kreen-menu-item-title" title="Page 404"
-                                               href="404.html">Page 404</a></li>
-                                    </ul>
-                                </li> -->
                                 <li *ngFor="let mn of menus"  id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kreen-menu-item-title" title="Pages" href="#">{{mn.tendm}}</a>
                                 </li>
@@ -144,54 +99,34 @@
                                     <div class="shopcart-dropdown block-cart-link" data-kreen="kreen-dropdown">
                                         <a class="block-link link-dropdown" href="cart.html">
                                             <span class="pe-7s-shopbag"></span>
-                                            <span class="count">3</span>
+                                            <span class="count">{{total}}</span>
                                         </a>
                                     </div>
                                     <div class="widget kreen widget_shopping_cart">
                                         <div class="widget_shopping_cart_content">
-                                            <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
+                                            <h3 class="minicart-title">Giỏ hàng của tao<span class="minicart-number-items">{{total}}</span></h3>
                                             <ul class="kreen-mini-cart cart_list product_list_widget">
-                                                <li class="kreen-mini-cart-item mini_cart_item">
-                                                    <a href="#" class="remove remove_from_cart_button">×</a>
-                                                    <a href="#">
-                                                        <img src="assets/images/apro134-1-600x778.jpg"
-                                                             class="attachment-kreen_thumbnail size-kreen_thumbnail"
-                                                             alt="img" width="600" height="778">T-shirt with skirt – Pink&nbsp;
-                                                    </a>
-                                                    <span class="quantity">1 × <span
-                                                            class="kreen-Price-amount amount"><span
-                                                            class="kreen-Price-currencySymbol">$</span>150.00</span></span>
-                                                </li>
-                                                <li class="kreen-mini-cart-item mini_cart_item">
-                                                    <a href="#" class="remove remove_from_cart_button">×</a>
-                                                    <a href="#">
-                                                        <img src="assets/images/apro1113-600x778.jpg"
-                                                             class="attachment-kreen_thumbnail size-kreen_thumbnail"
-                                                             alt="img" width="600" height="778">Abstract Sweatshirt&nbsp;
-                                                    </a>
-                                                    <span class="quantity">1 × <span
-                                                            class="kreen-Price-amount amount"><span
-                                                            class="kreen-Price-currencySymbol">$</span>129.00</span></span>
-                                                </li>
-                                                <li class="kreen-mini-cart-item mini_cart_item">
-                                                    <a href="#" class="remove remove_from_cart_button">×</a>
-                                                    <a href="#">
-                                                        <img src="assets/images/apro201-1-600x778.jpg"
-                                                             class="attachment-kreen_thumbnail size-kreen_thumbnail"
-                                                             alt="img" width="600" height="778">Iridium Spark Plug&nbsp;
-                                                    </a>
-                                                    <span class="quantity">1 × <span
-                                                            class="kreen-Price-amount amount"><span
-                                                            class="kreen-Price-currencySymbol">$</span>139.00</span></span>
-                                                </li>
+                                                <ng-container *ngFor="let sp of items">
+                                                    <li class="kreen-mini-cart-item mini_cart_item">
+                                                        <a href="javascrpit:void(0)" (click)="deleteItem(sp.masp)" class="remove remove_from_cart_button">×</a>
+                                                        <a href="#">
+                                                            <img src="../../../../assets/images/{{sp.hinhanh}}"
+                                                                 class="attachment-kreen_thumbnail size-kreen_thumbnail"
+                                                                 alt="img" width="600" height="778">{{sp.tensp}}&nbsp;
+                                                        </a>
+                                                        <span class="quantity">{{sp.soluong}} × <span
+                                                                class="kreen-Price-amount amount"><span
+                                                                class="kreen-Price-currencySymbol"></span>{{sp.gia}}</span> đồng</span>
+                                                    </li>
+                                                </ng-container>
                                             </ul>
-                                            <p class="kreen-mini-cart__total total"><strong>Subtotal:</strong>
+                                            <p class="kreen-mini-cart__total total"><strong>Tổng tiền:</strong>
                                                 <span class="kreen-Price-amount amount"><span
-                                                        class="kreen-Price-currencySymbol">$</span>418.00</span>
+                                                        class="kreen-Price-currencySymbol"></span>{{totalprice}}</span>
                                             </p>
                                             <p class="kreen-mini-cart__buttons buttons">
-                                                <a href="cart.html" class="button kreen-forward">Viewcart</a>
-                                                <a href="checkout.html" class="button checkout kreen-forward">Checkout</a>
+                                                <a href="cart.html" class="button kreen-forward">Giỏ hàng</a>
+                                                <a href="checkout.html" class="button checkout kreen-forward">Đặt hàng</a>
                                             </p>
                                         </div>
                                     </div>
@@ -321,46 +256,29 @@
                         <div class="shopcart-dropdown block-cart-link" data-kreen="kreen-dropdown">
                             <a class="block-link link-dropdown" href="cart.html">
                                 <span class="pe-7s-shopbag"></span>
-                                <span class="count">3</span>
+                                <span class="count">{{total}}</span>
                             </a>
                         </div>
                         <div class="widget kreen widget_shopping_cart">
                             <div class="widget_shopping_cart_content">
-                                <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
+                                <h3 class="minicart-title">Giỏ hàng của tao<span class="minicart-number-items">{{total}}</span></h3>
                                 <ul class="kreen-mini-cart cart_list product_list_widget">
-                                    <li class="kreen-mini-cart-item mini_cart_item">
-                                        <a href="#" class="remove remove_from_cart_button">×</a>
-                                        <a href="#">
-                                            <img src="assets/images/apro134-1-600x778.jpg"
-                                                 class="attachment-kreen_thumbnail size-kreen_thumbnail"
-                                                 alt="img" width="600" height="778">T-shirt with skirt – Pink&nbsp;
-                                        </a>
-                                        <span class="quantity">1 × <span
-                                                class="kreen-Price-amount amount"><span
-                                                class="kreen-Price-currencySymbol">$</span>150.00</span></span>
-                                    </li>
-                                    <li class="kreen-mini-cart-item mini_cart_item">
-                                        <a href="#" class="remove remove_from_cart_button">×</a>
-                                        <a href="#">
-                                            <img src="assets/images/apro1113-600x778.jpg"
-                                                 class="attachment-kreen_thumbnail size-kreen_thumbnail"
-                                                 alt="img" width="600" height="778">Abstract Sweatshirt&nbsp;
-                                        </a>
-                                        <span class="quantity">1 × <span
-                                                class="kreen-Price-amount amount"><span
-                                                class="kreen-Price-currencySymbol">$</span>129.00</span></span>
-                                    </li>
-                                    <li class="kreen-mini-cart-item mini_cart_item">
-                                        <a href="#" class="remove remove_from_cart_button">×</a>
-                                        <a href="#">
-                                            <img src="assets/images/apro201-1-600x778.jpg"
-                                                 class="attachment-kreen_thumbnail size-kreen_thumbnail"
-                                                 alt="img" width="600" height="778">Iridium Spark Plug&nbsp;
-                                        </a>
-                                        <span class="quantity">1 × <span
-                                                class="kreen-Price-amount amount"><span
-                                                class="kreen-Price-currencySymbol">$</span>139.00</span></span>
-                                    </li>
+                                    <ng-container *ngFor="let sp of items">
+                                        <li class="kreen-mini-cart-item mini_cart_item">
+                                            <a href="javascrpit:void(0)" class="remove remove_from_cart_button">×</a>
+                                            <a href="#">
+                                                <img src="assets/images/apro201-1-600x778.jpg"
+                                                     class="attachment-kreen_thumbnail size-kreen_thumbnail"
+                                                     alt="img" width="600" height="778">{{sp.tensp}&nbsp;
+                                            </a>
+                                            <span class="quantity">{{sp.soluong}} × 
+                                                <span class="kreen-Price-amount amount">
+                                                    <span class="kreen-Price-currencySymbol"></span>
+                                                    {{sp.gia}}
+                                                </span> đồng
+                                            </span>
+                                        </li>
+                                    </ng-container>
                                 </ul>
                                 <p class="kreen-mini-cart__total total"><strong>Subtotal:</strong>
                                     <span class="kreen-Price-amount amount"><span
