@@ -20,9 +20,28 @@
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kreen-clone-mobile-menu kreen-nav main-menu">
-                                <li *ngFor="let mn of menus"  id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
+                                <!-- <li *ngFor="let mn of menus"  id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kreen-menu-item-title" title="Pages" href="#">{{mn.tendm}}</a>
-                                </li>
+                                </li> -->
+                                <ng-container *ngFor="let mn of menus">
+                                    <li id="menu-item-230"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
+                                        <a class="kreen-menu-item-title" title="Home" href="#" [routerLink] = "[mn.url]" >{{mn.tendm}}</a>                                       
+                                        <span class="toggle-submenu"></span>  
+                                        <ng-container *ngFor="let itldm of itemldm">                                        
+                                            <ul role="menu" class="submenu" *ngIf="mn.madm == itldm.madm?true:false" >    
+                                                <ng-container *ngFor="let itldm of itemldm">                  
+                                                    <li *ngIf="mn.madm == itldm.madm?true:false" id="menu-item-987"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
+                                                        <a class="kreen-menu-item-title" title="About"
+                                                        href="#" >{{itldm.tenloai}}</a></li>   
+                                                </ng-container>                                         
+                                            </ul>  
+                                        </ng-container>                  
+                                    </li>
+                                </ng-container>
+
+
                             </ul>
                         </div>
                     </div>

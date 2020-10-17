@@ -12,6 +12,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   total:any;
   items:any;
   totalprice:any;
+  itemldm : any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -20,6 +21,13 @@ export class HeaderComponent extends BaseComponent implements OnInit {
       this.menus = res;
       console.log(this.menus);
     }); 
+    this._api.get('/api/Loai/get-loai').subscribe(res=>{
+      this.itemldm = res;
+      setTimeout(()=>{
+        this.loadScripts();
+      })
+    })
+
     this._cart.items.subscribe(res=>{
       this.items = res;
       var x =0;
