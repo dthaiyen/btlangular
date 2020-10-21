@@ -7,6 +7,7 @@ import { BodyComponent } from './body/body.component';
 import { CartComponent } from './cart/cart.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { ListsanphamComponent } from './listsanpham/listsanpham.component';
+import { SearchComponent } from './search/search.component';
 
 const approuter : Routes =[
   {
@@ -32,13 +33,17 @@ const approuter : Routes =[
       {
         path:'loaisanpham/:id',
         component: ListsanphamComponent
+      },
+      {
+        path:'timkiem/:txttk',
+        component: SearchComponent
       }
     
     ]
   }
 ]
 @NgModule({
-  declarations: [MainComponent, BodyComponent, CartComponent, LienheComponent, ListsanphamComponent],
+  declarations: [MainComponent, BodyComponent, CartComponent, LienheComponent, ListsanphamComponent,SearchComponent],
   imports: [
     CommonModule,
     ShareModule,

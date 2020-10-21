@@ -61,28 +61,13 @@
                                               class="form-search block-search-form kreen-live-search-form">
                                             <div class="form-content search-box results-search">
                                                 <div class="inner">
-                                                    <input autocomplete="off" class="searchfield txt-livesearch input"
+                                                    <input autocomplete="off" #timkiem class="searchfield txt-livesearch input"
                                                            name="s" value="" placeholder="Search here..." type="text">
                                                 </div>
                                             </div>
                                             <input name="post_type" value="product" type="hidden">
                                             <input name="taxonomy" value="product_cat" type="hidden">
-                                            <div class="category">
-                                                <select title="product_cat" name="product_cat" id="64788262"
-                                                        class="category-search-option"
-                                                        tabindex="-1" style="display: none;">
-                                                    <option value="0">All Categories</option>
-                                                    <option class="level-0" value="light">Healthy</option>
-                                                    <option class="level-0" value="chair">Pumpkin</option>
-                                                    <option class="level-0" value="table">Leafy green</option>
-                                                    <option class="level-0" value="bed">Soybeans</option>
-                                                    <option class="level-0" value="new-arrivals">New arrivals</option>
-                                                    <option class="level-0" value="lamp">Summer Sale</option>
-                                                    <option class="level-0" value="specials">Raw fruit</option>
-                                                    <option class="level-0" value="sofas">Cauliflower</option>
-                                                </select>
-                                            </div>
-                                            <button type="submit" class="btn-submit">
+                                            <button (click)="search(timkiem.value)" type="button" class="btn-submit">
                                                 <span class="pe-7s-search"></span>
                                             </button>
                                         </form><!-- block search -->
@@ -177,28 +162,12 @@
                           class="form-search block-search-form kreen-live-search-form">
                         <div class="form-content search-box results-search">
                             <div class="inner">
-                                <input autocomplete="off" class="searchfield txt-livesearch input" name="s" value=""
-                                       placeholder="Search here..." type="text">
+                                <input autocomplete="off" #timkiem class="searchfield txt-livesearch input" name="s" value="" placeholder="Search here..." type="text">
                             </div>
                         </div>
                         <input name="post_type" value="product" type="hidden">
                         <input name="taxonomy" value="product_cat" type="hidden">
-                        <div class="category">
-                            <select title="product_cat" name="product_cat"
-                                    class="category-search-option" tabindex="-1"
-                            >
-                                <option value="0">All Categories</option>
-                                <option class="level-0" value="light">Healthy</option>
-                                <option class="level-0" value="chair">Pumpkin</option>
-                                <option class="level-0" value="table">Leafy green</option>
-                                <option class="level-0" value="bed">Soybeans</option>
-                                <option class="level-0" value="new-arrivals">New arrivals</option>
-                                <option class="level-0" value="lamp">Summer Sale</option>
-                                <option class="level-0" value="specials">Raw fruit</option>
-                                <option class="level-0" value="sofas">Cauliflower</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-submit">
+                        <button type="button" (click)="search(timkiem.value)" class="btn-submit">
                             <span class="pe-7s-search"></span>
                         </button>
                     </form><!-- block search -->

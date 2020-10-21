@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BaseComponent } from '../../lib/base-component';
+import {Router} from '@angular/router';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/operator/takeUntil';
 @Component({
@@ -13,7 +14,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   items:any;
   totalprice:any;
   itemldm : any;
-  constructor(injector: Injector) { 
+  constructor(injector: Injector, private _rou: Router) { 
     super(injector);
   }
   ngOnInit(): void {
@@ -43,5 +44,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     this._cart.deleteItem(id);
     alert('Xóa thành công');
   }
-
+  search(timkiem){
+    this._rou.navigate(["/timkiem",timkiem]);
+  }
 }
