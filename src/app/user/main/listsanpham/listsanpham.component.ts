@@ -1,39 +1,29 @@
-
-
-import { BaseComponent } from 'src/app/user/lib/base-component';
 import { Component, OnInit, Injector } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { inject } from '@angular/core/testing';
+import {BaseComponent} from "../../lib/base-component"
 @Component({
-  selector: 'app-single-product',
+  selector: 'app-listsanpham',
   templateUrl: './listsanpham.component.html',
   styleUrls: ['./listsanpham.component.css']
 })
-export class SingleProductComponent extends BaseComponent implements OnInit {
-  
-  constructor(private _http:HttpClient, private _router: ActivatedRoute, private injector:Injector) {
+export class ListsanphamComponent extends BaseComponent implements OnInit {
+
+  constructor(private injector:Injector) { 
     super(injector)
-   }
-  ct : any;
-  ctlq:any;
+  }
+  allitem:any;
   ngOnInit(): void {
-    this._router.params.subscribe(params=>{
-      let id = params["id"];
-      this._http.get("https://localhost:44374/api/sanpham/get-by-id/"+id).subscribe(res=>{
-        this.ct = res;
-        this._http.get("https://localhost:44374/api/sanpham/Get_Sanpham_lq/"+this.ct.maloai).subscribe(res=>{
-          this.ctlq = res;
-          setTimeout(()=>{
-            this.loadScripts();
-          })
-        });
-      });
+    this._route.params.subscribe(params=>{
+      var id = params["id"];
+      // alert(id);
+      this._api.get("/api/item/Get_Sanpham_idloai/"+id).subscribe(res=>{
+        this.allitem = res;
+        console.log(res);
+        setTimeout(()=>{
+          this.loadScripts();
+        })
+      })
     })
   }
-  changequantiti(){
 
-  }
-  add_cart(ct){
-
-  }
 }

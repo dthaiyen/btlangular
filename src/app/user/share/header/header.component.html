@@ -34,7 +34,7 @@
                                                     <li *ngIf="mn.madm == itldm.madm?true:false" id="menu-item-987"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
                                                         <a class="kreen-menu-item-title" title="About"
-                                                        href="#" >{{itldm.tenloai}}</a></li>   
+                                                        href="#" [routerLink] = "['loaisanpham',itldm.maloai]">{{itldm.tenloai}}</a></li>   
                                                 </ng-container>                                         
                                             </ul>  
                                         </ng-container>                  

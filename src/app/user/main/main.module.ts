@@ -28,7 +28,12 @@ const approuter : Routes =[
       {
         path:'giohang',
         component: CartComponent
+      },
+      {
+        path:'loaisanpham/:id',
+        component: ListsanphamComponent
       }
+    
     ]
   }
 ]

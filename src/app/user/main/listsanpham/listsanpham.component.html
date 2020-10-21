@@ -1,207 +1,105 @@
-<div class="banner-wrapper no_background">
+<div class="banner-wrapper has_background">
+    <img src="../../../../assets/images/banner7.jpg"
+         class="img-responsive attachment-1920x447 size-1920x447" alt="img" style="width: 100%; height: 20px;">
     <div class="banner-wrapper-inner">
-        <nav class="kreen-breadcrumb"><a href="index.html">Trang chủ</a><i class="fa fa-angle-right"></i><a href="#">Sản phẩm</a>
-            <i class="fa fa-angle-right"></i>{{ct.tensp}}
-        </nav>
+        <h1 class="page-title">Sản phẩm</h1>
+        <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+            <ul class="trail-items breadcrumb">
+                <li class="trail-item trail-begin"><a href="index.html"><span>Trang chủ</span></a></li>
+                <li class="trail-item trail-end active"><span>Sản phẩm</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
-<div class="single-thumb-vertical main-container shop-page no-sidebar">
+<div class="main-container shop-page no-sidebar">
     <div class="container">
         <div class="row">
             <div class="main-content col-md-12">
-                <div class="kreen-notices-wrapper"></div>
-                <div id="product-27"
-                     class="post-27 product type-product status-publish has-post-thumbnail product_cat-table product_cat-new-arrivals product_cat-lamp product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-variable has-default-attributes">
-                    <div class="main-contain-summary">
-                        <div class="contain-left has-gallery">
-                            <div class="single-left">
-                                <div class="kreen-product-gallery kreen-product-gallery--with-images kreen-product-gallery--columns-4 images">
-                                    <div class="flex-viewport">
-                                        <figure class="kreen-product-gallery__wrapper">
-                                            <div class="kreen-product-gallery__image">
-                                                <img alt="img"
-                                                     src="../../../../assets/images/sanpham/{{ct.anh}}"
-                                                     alt="Cherry tomato" style="width: 400px; height: 500px;">
-                                            </div>
-                                        </figure>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="summary entry-summary">
-                                <div class="flash">
-                                    <span class="onnew"><span class="text">Mới</span></span></div>
-                                <h1 class="product_title entry-title">{{ct.tensp}}</h1>
-                                <p class="price"><span class="kreen-Price-amount amount"><span
-                                        class="kreen-Price-currencySymbol">Giá: </span>{{ ct.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span>
-                                <p class="stock in-stock">
-                                    Tác giả: <span> {{ct.tacgia}}</span>
-                                </p>
-                                <div class="kreen-product-details__short-description">
-                                    <p>{{ct.motangan}}</p>
-                                </div>
-                                <form class="variations_form cart">
-                                    <div class="single_variation_wrap">
-                                        <div class="kreen-variation single_variation"></div>
-                                        <div class="kreen-variation-add-to-cart variations_button">
-                                            <div class="quantity">
-                                                <!-- <span class="qty-label">Quantiy:</span>
-                                                <div class="control">
-                                                    <a class="btn-number qtyminus quantity-minus" href="#">-</a>
-                                                        <input type="text" #txtsoluong (change)="changequantiti(txtsoluong.value)" data-step="1" min="0" max="" name="quantity[25]" value="1" title="Qty" class="input-qty input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
-                                                    <a class="btn-number qtyplus quantity-plus" href="#">+</a>
-                                                </div> -->
-                                            </div>
-                                            <button type="button" (click)="add_cart(ct)" class="single_add_to_cart_button button alt kreen-variation-selection-needed">
-                                                Thêm vào giỏ hàng
-                                            </button>
-                                            <input name="add-to-cart" value="27" type="hidden">
-                                            <input name="product_id" value="27" type="hidden">
-                                            <input name="variation_id" class="variation_id" value="0" type="hidden">
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="yith-wcwl-add-to-wishlist">
-                                    <div class="yith-wcwl-add-button show">
-                                        <a href="#" rel="nofollow"
-                                           data-product-id="27" data-product-type="variable" class="add_to_wishlist">
-                                            Thêm vào yêu thích</a>
-                                    </div>
-                                </div>
-                                <div class="product_meta">
-                                    <div class="wcml-dropdown product wcml_currency_switcher">
-                                        <ul>
-                                            <li class="wcml-cs-active-currency">
-                                                <a class="wcml-cs-item-toggle">VNĐ</a>
-                                                <ul class="wcml-cs-submenu">
-                                                    <li>
-                                                        <a>USD</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="kreen-share-socials">
-                                    <h5 class="social-heading">Share: </h5>
-                                    <a target="_blank" class="facebook" href="#">
-                                        <i class="fa fa-facebook-f"></i>
-                                    </a>
-                                    <a target="_blank" class="twitter"
-                                       href="#"><i class="fa fa-twitter"></i>
-                                    </a>
-                                    <a target="_blank" class="pinterest"
-                                       href="#"> <i class="fa fa-pinterest"></i>
-                                    </a>
-                                    <a target="_blank" class="googleplus"
-                                       href="#"><i class="fa fa-google-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="shop-control shop-before-control">
+                    <div class="grid-view-mode">
+                        <form>
+                            <a href="shop.html" data-toggle="tooltip" data-placement="top"
+                               class="modes-mode mode-grid display-mode active" value="grid">
+                                <span class="button-inner">
+                                    Shop Grid
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                            <a href="shop-list.html" data-toggle="tooltip" data-placement="top"
+                               class="modes-mode mode-list display-mode " value="list">
+                                <span class="button-inner">
+                                    Shop List
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                        </form>
                     </div>
-                    <div class="kreen-tabs kreen-tabs-wrapper">
-                        <ul class="tabs dreaming-tabs" role="tablist">
-                            <li class="description_tab active" id="tab-title-description" role="tab"
-                            aria-controls="tab-description">
-                            <a href="#tab-description">Thông tin chi tiết</a>
-                             </li>
-                            <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Bình luận (0)</a>
-                            </li>
-                        </ul>
-                        <div class="kreen-Tabs-panel kreen-Tabs-panel--description panel entry-content kreen-tab"
-                             id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                            <h2>Thông tin chi tiết</h2>
-                            <div class="container-table">
-                                <div class="container-cell">
-                                    <h2 class="az_custom_heading">{{ct.tensp}}<br></h2>
-                                    <p>{{ct.mota}}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="kreen-Tabs-panel kreen-Tabs-panel--reviews panel entry-content kreen-tab"
-                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div id="reviews" class="kreen-Reviews">
-                                <div id="comments">
-                                    <h2 class="kreen-Reviews-title">Bình luận</h2>
-                                    <p class="kreen-noreviews">Hiện tại không có đánh giá nào.</p>
-                                </div>
-                                <div id="review_form_wrapper">
-                                    <div id="review_form">
-                                        <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Hãy là người đầu tiên nhận xét</span>
-                                            <form id="commentform" class="comment-form">
-                                                <p class="comment-notes"><span id="email-notes">Email của bạn sẽ không được xuất bản. Các trường bắt buộc được đánh dấu *.</span>
-                                                   Phần không thể bỏ trống <span class="required">*</span></p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Tên&nbsp;<span
-                                                            class="required">*</span></label>
-                                                    <input id="author" name="author" value="" size="30" required=""
-                                                           type="text"></p>
-                                                <p class="comment-form-email"><label for="email">Email&nbsp;
-                                                    <span class="required">*</span></label>
-                                                    <input id="email" name="email" value="" size="30" required=""
-                                                           type="email"></p>
-                                                <div class="comment-form-rating"><label for="rating">Đánh giá của bạn</label>
-                                                    <p class="stars">
-                                                        <span>
-                                                        <a class="star-1" href="#">1</a>
-                                                        <a class="star-2" href="#">2</a><a class="star-3" href="#">3</a>
-                                                        <a class="star-4" href="#">4</a>
-                                                        <a class="star-5" href="#">5</a>
-                                                        </span>
-                                                    </p>
-                                                    <select title="product_cat" name="rating" id="rating" required=""
-                                                            style="display: none;">
-                                                        <option value="">Rate…</option>
-                                                        <option value="5">Perfect</option>
-                                                        <option value="4">Good</option>
-                                                        <option value="3">Average</option>
-                                                        <option value="2">Not that bad</option>
-                                                        <option value="1">Very poor</option>
-                                                    </select></div>
-                                                <p class="comment-form-comment"><label for="comment">Nhận xét&nbsp;<span class="required">*</span></label><textarea
-                                                        id="comment" name="comment" cols="45" rows="8"
-                                                        required=""></textarea></p><input name="wpml_language_code"
-                                                                                          value="en" type="hidden">
-                                                <p class="form-submit"><input name="submit" id="submit" class="submit"
-                                                                              value="Submit" type="submit"> <input
-                                                        name="comment_post_ID" value="27" id="comment_post_ID"
-                                                        type="hidden">
-                                                    <input name="comment_parent" id="comment_parent" value="0"
-                                                           type="hidden">
-                                                </p></form>
-                                        </div><!-- #respond -->
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <form class="kreen-ordering" method="get">
+                        <select title="product_cat" name="orderby" class="orderby">
+                            <option value="menu_order" selected="selected">Default sorting</option>
+                            <option value="popularity">Sort by popularity</option>
+                            <option value="rating">Sort by average rating</option>
+                            <option value="date">Sort by latest</option>
+                            <option value="price">Sort by price: low to high</option>
+                            <option value="price-desc">Sort by price: high to low</option>
+                        </select>
+                    </form>
+                    <form class="per-page-form">
+                        <label>
+                            <select class="option-perpage">
+                                <option value="12" selected="">
+                                    Show 12
+                                </option>
+                                <option value="5">
+                                    Show 05
+                                </option>
+                                <option value="10">
+                                    Show 10
+                                </option>
+                                <option value="12">
+                                    Show 12
+                                </option>
+                                <option value="15">
+                                    Show 15
+                                </option>
+                                <option value="20">
+                                    Show All
+                                </option>
+                            </select>
+                        </label>
+                    </form>
                 </div>
-            </div>
-            <div class="col-md-12 col-sm-12 dreaming_related-product">
-                <div class="block-title">
-                    <h2 class="product-grid-title">
-                        <span>Sản phẩm liên quan</span>
-                    </h2>
-                </div>
-            <div class="owl-slick owl-products equal-container better-height"
-                     data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;slidesToShow&quot;:4}"
-                     data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
-                     <!-- <ng-container *ngFor="let ctl of ctlq">
-                        <div class="product-item style-01 post-27 product type-product status-publish has-post-thumbnail product_cat-table product_cat-new-arrivals product_cat-lamp product_tag-table product_tag-sock  instock shipping-taxable purchasable product-type-variable has-default-attributes ">
-                        
+                <div class=" auto-clear kreen-products">
+                    <ul class="row products columns-3">
+                        <ng-container *ngFor="let ait of allitem">
+                            <li class="product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
+                            data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
-                                    <a class="thumb-link"
-                                       href="#" tabindex="0">
+                                    <a class="thumb-link" href="#"[routerLink] = "['/chitietsanpham',ait.masp]">
                                         <img class="img-responsive"
-                                        src="../../../../assets/images/sanpham/{{ctl.anh}}"
-                                        alt="Cherry tomato" style="width: 600px; height: 350px;">
+                                             src="../../../../assets/images/{{ait.hinhanh}}"
+                                             alt="Cherry tomato" style="width: 600px; height: 350px;">
                                     </a>
-                                    <div class="flash"><span class="onnew"><span class="text">New</span></span></div>
+                                    <div class="flash">
+                                        <span class="onnew"><span class="text">New</span></span></div>
+                                    <!-- <form class="variations_form cart">
+                                        <table class="variations">
+                                            <tbody>
+                                            <tr>
+                                                <td class="value">
+                                                    <a class="reset_variations" href="#" style="visibility: hidden;">Clear</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        </form> -->
+                                    <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick View</a>
                                     <div class="group-button">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
@@ -213,66 +111,63 @@
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_variable add_to_cart_button">Add to
-                                                cart</a>
+                                            <a href="#" class="button product_type_variable add_to_cart_button">Select
+                                                options</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                    <a href="#"tabindex="0">{{ctl.tensp}}</a>
+                                        <a href="#"[routerLink] = "['/chitietsanpham',ait.masp]">{{ait.tensp}}</a>
                                     </h3>
                                     <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                 class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span></div>
                                     <span class="price"><span class="kreen-Price-amount amount"><span
-                                            class="kreen-Price-currencySymbol">{{ctl.gia}}</span>VND</span></span>
-                                            </div>
-                            </div>
-                        
-                        </div>
-                    </ng-container> -->
-                    
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <ng-container *ngFor="let ctl of ctlq">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product-grid7">
-                                <div class="product-image7">
-                                    <a href="#">
-                                        <img class="pic-1" src="../../../../assets/images/sanpham/{{ctl.anh}}"
-                                        alt="Cherry tomato" style="width: 600px; height: 350px;">
-                                        <img class="pic-2" src="../../../../assets/images/sanpham/{{ctl.anh}}"
-                                        alt="Cherry tomato" style="width: 600px; height: 350px;">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="" class="fa fa-search"></a></li>
-                                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                                    </ul>
+                                        class="kreen-Price-currencySymbol"></span>{{ ait.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span></span>
+                                    <!-- <div class="kreen-product-details__short-description">
+                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                            turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+                                            tempor sit amet, ante.</p>
+                                        <ul>
+                                            <li>Water-resistant fabric with soft lycra detailing inside</li>
+                                            <li>CLean zip-front, and three piece hood</li>
+                                            <li>Subtle branding and diagonal panel detail</li>
+                                        </ul>
+                                        </div> -->
                                 </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="#">{{ctl.tensp}}</a></h3>
-                                    <ul class="rating">
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                    </ul>
-                                    <div class="price">{{ ctl.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
-                                        <!-- <span>$20.00</span> -->
+                                <div class="group-button">
+                                    <div class="group-button-inner">
+                                        <div class="yith-wcwl-add-to-wishlist">
+                                            <div class="yith-wcwl-add-button show">
+                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
+                                            </div>
+                                        </div>
+                                        <div class="kreen product compare-button">
+                                            <a href="#" class="compare button">Compare</a>
+                                        </div>
+                                        <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="button product_type_variable add_to_cart_button">Select
+                                                options</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </ng-container>
+                        </li>
+                        </ng-container>
+                    </ul>
+                </div>
+                <div class="shop-control shop-after-control">
+                    <nav class="kreen-pagination">
+                        <span class="page-numbers current">1</span>
+                        <a class="page-numbers" href="#">2</a>
+                        <a class="next page-numbers" href="#">Next</a>
+                    </nav>
+                    <p class="kreen-result-count">Showing 1–12 of 20 results</p>
                 </div>
             </div>
-            <hr>
         </div>
     </div>
-</div>
+    </div>
