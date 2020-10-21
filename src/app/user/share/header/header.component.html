@@ -135,7 +135,7 @@
                                                         </a>
                                                         <span class="quantity">{{sp.soluong}} × <span
                                                                 class="kreen-Price-amount amount"><span
-                                                                class="kreen-Price-currencySymbol"></span>{{sp.gia}}</span> đồng</span>
+                                                                class="kreen-Price-currencySymbol"></span>{{ sp.gia.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</span> </span>
                                                     </li>
                                                 </ng-container>
                                             </ul>
