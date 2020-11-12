@@ -1,17 +1,4 @@
-<div class="banner-wrapper has_background">
-    <img src="assets/images/banner-for-all2.jpg"
-         class="img-responsive attachment-1920x447 size-1920x447" alt="img">
-    <div class="banner-wrapper-inner">
-        <h1 class="page-title">Cart</h1>
-        <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
-            <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="index.html"><span>Home</span></a></li>
-                <li class="trail-item trail-end active"><span>Cart</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+
 <main class="site-main main-container no-sidebar">
     <div class="container">
         <div class="row">
@@ -19,26 +6,24 @@
                 <div class="page-main-content">
                     <div class="kreen">
                         <div class="kreen-notices-wrapper"></div>
+                        <h2 style="text-align: center;">Giỏ hàng của bạn</h2>
                         <form class="kreen-cart-form">
                             <table class="shop_table shop_table_responsive cart kreen-cart-form__contents"
                                    cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th class="product-remove">&nbsp;</th>
-                                    <th class="product-thumbnail">&nbsp;</th>
+                                   
+                                    <th class="product-thumbnail">Hình ảnh</th>
                                     <th class="product-name">Tên sản phẩm</th>
                                     <th class="product-price">Giá</th>
                                     <th class="product-quantity">Số lượng</th>
-                                    <th class="product-subtotal">Tổng</th>
+                                    <th class="product-subtotal">Xóa</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <ng-container *ngFor="let cart of items">
                                     <tr class="kreen-cart-form__cart-item cart_item">
-                                        <td class="product-remove">
-                                            <a href="javascrpit:void(0)" (click) = "deleteItem(cart.masp)"
-                                               class="remove" aria-label="Remove this item" data-product_id="27"
-                                               data-product_sku="885B712">×</a></td>
+                                      
                                         <td class="product-thumbnail">
                                             <a href="#"><img
                                                     src="../../../../assets/images/{{cart.hinhanh}}"
@@ -60,9 +45,10 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="product-subtotal" data-title="Total">
-                                            <span class="kreen-Price-amount amount"><span
-                                                    class="kreen-Price-currencySymbol">$</span>150.00</span></td>
+                                        <td class="product-remove">
+                                            <a href="javascrpit:void(0)" (click) = "deleteItem(cart.masp)"
+                                               class="remove" aria-label="Remove this item" data-product_id="27"
+                                               data-product_sku="885B712">×</a></td>
                                     </tr>
                                 </ng-container>
                                 </tbody>
@@ -70,16 +56,16 @@
                         </form>
                         <div class="cart-collaterals">
                             <div class="cart_totals ">
-                                <h2>Cart totals</h2>
+                                <h2>Tổng tiền</h2>
                                 <table class="shop_table shop_table_responsive" cellspacing="0">
                                     <tbody>
                                     <tr class="cart-subtotal">
-                                        <th>Subtotal</th>
+                                        <th>Thành tiền</th>
                                         <td data-title="Subtotal"><span class="kreen-Price-amount amount"><span
                                                 class="kreen-Price-currencySymbol">$</span>418.00</span></td>
                                     </tr>
                                     <tr class="order-total">
-                                        <th>Total</th>
+                                        <th>Tổng</th>
                                         <td data-title="Total"><strong><span
                                                 class="kreen-Price-amount amount"><span
                                                 class="kreen-Price-currencySymbol">$</span>418.00</span></strong>
@@ -88,9 +74,9 @@
                                     </tbody>
                                 </table>
                                 <div class="kreen-proceed-to-checkout">
-                                    <a href="#"
+                                    <a href="#" [routerLink] = "['/dathang']"
                                        class="checkout-button button alt kreen-forward">
-                                        Proceed to checkout</a>
+                                        Thanh toán</a>
                                 </div>
                             </div>
                         </div>

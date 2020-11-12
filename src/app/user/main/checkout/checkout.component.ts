@@ -1,4 +1,4 @@
-import { BaseComponent } from 'src/app/lib/base-component';
+import { BaseComponent } from '../../lib/base-component';
 import { Component, OnInit, Injector } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Route, Router} from '@angular/router';
@@ -26,23 +26,22 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     cart.forEach(element => {
       var a = {
         masp: parseInt(element.masp),
-        soluong: parseInt(element.soluong),
-        gia:parseInt(element.gia)
+        soluong: parseInt(element.soluong)
       }
       arr.push(a);
     });
     var formdata = {
-      ten_kh : hoten,
-      noi_giao : noigiao, 
+      makh : hoten,
+      noigiao : noigiao, 
       sdt : sdt, 
-      thanh_tien: this._cart.totalIntem(),
+      thanhtien: this._cart.totalIntem(),
       listjson_chitiet : arr
     }
-    this.http.post("https://localhost:44374/api/hoadon/Dat_Hang",formdata).subscribe(res=>{
+    this.http.post("https://localhost:44334/api/hoadon/create-hoa-don",formdata).subscribe(res=>{
       if(res){
         alert("Đặt hàng thành công");
-        this._cart.clearCart();
         this.rout.navigate(["/trangchu"]);
+        this._cart.clearCart();       
       }
       else{
         alert("Đặt hàng thất bại");

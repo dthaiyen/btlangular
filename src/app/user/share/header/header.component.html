@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="widget kreen widget_shopping_cart">
                                         <div class="widget_shopping_cart_content">
-                                            <h3 class="minicart-title">Giỏ hàng của tao<span class="minicart-number-items">{{total}}</span></h3>
+                                            <h3 class="minicart-title">Giỏ hàng của bạn<span class="minicart-number-items">{{total}}</span></h3>
                                             <ul class="kreen-mini-cart cart_list product_list_widget">
                                                 <ng-container *ngFor="let sp of items">
                                                     <li class="kreen-mini-cart-item mini_cart_item">
@@ -129,8 +129,8 @@
                                                         class="kreen-Price-currencySymbol"></span>{{totalprice}}</span>
                                             </p>
                                             <p class="kreen-mini-cart__buttons buttons">
-                                                <a href="cart.html" class="button kreen-forward">Giỏ hàng</a>
-                                                <a href="checkout.html" class="button checkout kreen-forward">Đặt hàng</a>
+                                                <a href="#" [routerLink] = "['/giohang']" class="button kreen-forward">Giỏ hàng</a>
+                                                <a href="checkout.html" [routerLink] = "['/dathang']" class="button checkout kreen-forward">Đặt hàng</a>
                                             </p>
                                         </div>
                                     </div>

@@ -84,6 +84,15 @@ export class CartService {
     this.itemsSubject.next(local_storage);
   }
 
+  totalIntem(){
+    let local_storage = JSON.parse(localStorage.getItem('cart'));
+    var s = 0;
+    local_storage.forEach(element => {
+      s = s + element.soluong * element.gia;
+    });
+    return s;
+  }
+  
   numberOfItems() {
     let local_storage = JSON.parse(localStorage.getItem('cart'));
     return local_storage.length;
@@ -92,5 +101,6 @@ export class CartService {
   clearCart() {
    localStorage.clear();
    this.itemsSubject.next(null);
+   this.totalIntem();
   }
 }

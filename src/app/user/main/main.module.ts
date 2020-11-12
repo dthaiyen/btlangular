@@ -8,6 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { ListsanphamComponent } from './listsanpham/listsanpham.component';
 import { SearchComponent } from './search/search.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const approuter : Routes =[
   {
@@ -37,13 +38,16 @@ const approuter : Routes =[
       {
         path:'timkiem/:txttk',
         component: SearchComponent
+      },
+      {
+        path: 'dathang',
+        component: CheckoutComponent
       }
-    
     ]
   }
 ]
 @NgModule({
-  declarations: [MainComponent, BodyComponent, CartComponent, LienheComponent, ListsanphamComponent,SearchComponent],
+  declarations: [MainComponent, BodyComponent, CartComponent, LienheComponent, ListsanphamComponent,SearchComponent,CheckoutComponent],
   imports: [
     CommonModule,
     ShareModule,
